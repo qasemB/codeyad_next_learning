@@ -212,6 +212,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     z-index: 1;
 }
 .welcome-hero:before {
+    display: none;
     position: absolute;
     content: "";
     top: 0;
@@ -220,7 +221,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     height: 100%;
     background: rgba(42,45,84,.60);
 }
-.header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
+.header-area{
+    background: #00000059;
+    position: absolute;top:0;left:0;width: 100%;z-index: 99;
+}
 
 /*.welcome-hero-txt*/
 .welcome-hero-txt{text-align: center;padding:290px 0 372px;}
@@ -267,7 +271,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     background: #fff;
     box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
     position: absolute;
-    bottom: 46px;
+    bottom: -82px;
     width: 100%;
     border-radius: 3px;
 }
