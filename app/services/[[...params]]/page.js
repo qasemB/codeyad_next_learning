@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 
-const Services = () => {
+const Services = (props) => {
+    console.log(props);
     return (
         <section id="service" className="service">
             <div className="container">
