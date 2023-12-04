@@ -1,5 +1,19 @@
 import React from 'react';
 
+// export const generateMetadata = async ({ params, searchParams })=>{
+//     const res = await fetch("https://...")
+//     const title = res.data.title
+//     return {
+//         title,
+//     }
+// }
+
+export const generateMetadata = ({ params, searchParams })=>{
+    return {
+        title: `car no ${params.carId}`,
+    }
+}
+
 const Page = ({ params, searchParams }) => {
     return (
         <section className="featured-cars" style={{width:"100%",display:"flex", flexDirection:"column", marginTop:"70px", justifyContent:"center", alignItems:"center"}}>
