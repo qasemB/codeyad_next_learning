@@ -13,13 +13,13 @@ const Login = () => {
                 Login form
             </h1>
             <form>
-                <div class="input-group" style={{marginBottom:"20px"}}>
-                    <span class="input-group-addon" id="sizing-addon2">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" />
+                <div className="input-group" style={{marginBottom:"20px"}}>
+                    <span className="input-group-addon" id="sizing-addon2">@</span>
+                    <input type="text" className="form-control" placeholder="Username" aria-describedby="sizing-addon2" />
                 </div>
-                <div class="input-group" style={{marginBottom:"20px"}}>
-                    <span class="input-group-addon" id="sizing-addon2">@</span>
-                    <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2" />
+                <div className="input-group" style={{marginBottom:"20px"}}>
+                    <span className="input-group-addon" id="sizing-addon2">@</span>
+                    <input type="password" className="form-control" placeholder="Password" aria-describedby="sizing-addon2" />
                 </div>
 
                 <div style={{textAlign:"center"}}>

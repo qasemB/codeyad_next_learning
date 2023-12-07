@@ -2,7 +2,6 @@
 import React from 'react';
 
 const Services = (props) => {
-    console.log(props);
     return (
         <section id="service" className="service">
             <div className="container">

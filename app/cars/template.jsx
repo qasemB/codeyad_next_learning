@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const CarsLayout = ({ children }) => {
-    const [input, setInput] = useState("ok")
+    const [input, setInput] = useState("My Cart")
     return (
         <>
             {children}
@@ -26,7 +26,7 @@ const CarsLayout = ({ children }) => {
                 }}>
                 <i className='fa fa-shopping-basket'></i>
                 {input}
-                <input value={input} onChange={e=>setInput(e.target.value)} style={{position:"absolute", top:"80px", left:"0", color:"black"}}/>
+                {/* <input value={input} onChange={e=>setInput(e.target.value)} style={{position:"absolute", top:"80px", left:"0", color:"black"}}/> */}
             </div>
         </>
     );
