@@ -1,23 +1,16 @@
+import Link from "next/link"
+import { Container, ListGroup, Row } from "react-bootstrap"
 
-export default function Home(props) {
+export default function Home() {
   return (
-    <div>
-     <ul>
-      {props.posts.map(p=>(
-        <li key={p.id}>{p.title}</li>
-      ))}
-     </ul>
-    </div>
+    <Container>
+      <Row className="mt-5">
+        <ListGroup>
+            <ListGroup.Item action>
+              <Link href={"/users"}><div>users</div></Link>
+            </ListGroup.Item>
+        </ListGroup>
+      </Row>
+    </Container>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const posts = await res.json()
-  // console.log(posts.length);
-  return {
-    props: {
-      posts,
-    },
-  }
 }
