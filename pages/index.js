@@ -3,11 +3,11 @@ import { Container, ListGroup, Row } from "react-bootstrap"
 
 export default function Home() {
   return (
-    <Container>
-      <Row className="mt-5">
+    <Container className="d-flex justify-content-center align-items-center">
+      <Row className="mt-5 w-100">
         <ListGroup>
             <ListGroup.Item action>
-              <Link href={"/users"}><div>users</div></Link>
+              <Link className="w-100 d-block text-decoration-none" href={"/users"}>users</Link>
             </ListGroup.Item>
         </ListGroup>
       </Row>
