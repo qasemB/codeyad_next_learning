@@ -7,7 +7,7 @@ export default function Home() {
       <Row className="mt-5 w-100">
         <ListGroup>
             <ListGroup.Item action>
-              <Link className="w-100 d-block text-decoration-none" href={"/users"}>users</Link>
+              <Link className="w-100 d-block text-decoration-none" href={"/posts"}>posts</Link>
             </ListGroup.Item>
         </ListGroup>
       </Row>
