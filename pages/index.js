@@ -9,6 +9,9 @@ export default function Home() {
             <ListGroup.Item action>
               <Link className="w-100 d-block text-decoration-none" href={"/posts"}>posts</Link>
             </ListGroup.Item>
+            <ListGroup.Item action>
+              <Link className="w-100 d-block text-decoration-none" href={"/users"}>users</Link>
+            </ListGroup.Item>
         </ListGroup>
       </Row>
     </Container>
