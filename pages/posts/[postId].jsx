@@ -1,10 +1,10 @@
-// import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 // import { useRouter } from 'next/router';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const PostId = ({ post }) => {
-    // const router = useRouter()
+    const router = useRouter()
     // const router = useRouter()
     // return router.isFallback ? (
     //     <h1>Loading...</h1>
@@ -48,12 +48,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { params } = context
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+    const res = await fetch(`http://localhost:4000/posts/${params.postId}`)
     const post = await res.json()
     console.log(post.id);
     return {
         props: {
             post,
         },
+        revalidate: 30
     }
 }

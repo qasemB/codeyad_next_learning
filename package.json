@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve-json" : "json-server --watch db.json --port 4000"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "json-server": "^0.17.4",
     "next": "14.0.4",
     "react": "^18",
     "react-bootstrap": "^2.9.1",

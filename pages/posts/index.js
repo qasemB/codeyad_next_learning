@@ -21,11 +21,13 @@ export default function Posts(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const res = await fetch('http://localhost:4000/posts')
   const posts = await res.json()
+  console.log(posts.length);
   return {
     props: {
       posts,
     },
+    revalidate: 10
   }
 }
