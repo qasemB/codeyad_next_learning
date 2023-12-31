@@ -26,9 +26,6 @@ export default UserId;
 
 export async function getServerSideProps(context) {
     const { params , req, res, query} = context
-    // res.setHeader('Set-Cookie', [`page=${params.userId}`])
-    // console.log(req.headers.cookie);
-    console.log(query);
     const response = await fetch(`http://localhost:4000/users/${params.userId}`)
     const user = await response.json()
     return {
