@@ -18,6 +18,9 @@ export default function Home() {
             <ListGroup.Item action>
               <Link className="w-100 d-block text-decoration-none" href={"/admin/panel"}>admin - panel</Link>
             </ListGroup.Item>
+            <ListGroup.Item action>
+              <Link className="w-100 d-block text-decoration-none" href={"/fPosts"}>filtered posts</Link>
+            </ListGroup.Item>
         </ListGroup>
       </Row>
     </Container>
