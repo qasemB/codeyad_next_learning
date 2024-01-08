@@ -1,3 +1,4 @@
+import BackButton from '@/components/BackButton';
 import ListGroupItemLink from '@/components/ListGroupItemLink';
 import React from 'react';
 import { Button, Container, ListGroup, Row } from 'react-bootstrap';
@@ -12,7 +13,7 @@ const Page = async () => {
     const posts = await getPostsService()
     return (
         <Container className="d-flex justify-content-center align-items-center flex-column">
-            <Button className="mt-2">Back</Button>
+            <BackButton/>
             <Row className="mt-3 w-100">
                 <ListGroup>
                     {posts.map(p => (
