@@ -11,6 +11,12 @@ const getPostsService = async ()=>{
 
 const Page = async () => {
     const posts = await getPostsService()
+    async function create() {
+        'use server'
+     
+        // ...
+    }
+     
     return (
         <Container className="d-flex justify-content-center align-items-center flex-column">
             <BackButton/>
