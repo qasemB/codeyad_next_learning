@@ -1,5 +1,6 @@
 import BackButton from '@/components/BackButton';
 import ListGroupItemLink from '@/components/ListGroupItemLink';
+import UpdateData from '@/components/UpdateData';
 import React from 'react';
 import { Button, Container, ListGroup, Row } from 'react-bootstrap';
 
@@ -22,12 +23,13 @@ const User = async ({ params }) => {
     return (
         <Container className="d-flex justify-content-center align-items-center flex-column">
             <BackButton />
+            <UpdateData path={`/users/${params.userId}`} />
             <Row className="mt-3 w-100">
                 <ListGroup>
                     <ListGroupItemLink title={user.id} />
                     <ListGroupItemLink title={user.name} />
                     <ListGroupItemLink title={user.email} />
-                    <ListGroupItemLink title={user.address.city} />
+                    {/* <ListGroupItemLink title={user.address.city} /> */}
                 </ListGroup>
             </Row>
         </Container>
