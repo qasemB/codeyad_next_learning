@@ -4,7 +4,7 @@ import React from 'react';
 import { Button, Container, ListGroup, Row } from 'react-bootstrap';
 
 const getPostsService = async ()=>{
-    const res = await fetch('http://localhost:4000/posts')
+    const res = await fetch('http://localhost:4000/posts', {next:{revalidate: 10}})
     const posts = await res.json()
     return posts
 }
