@@ -8,9 +8,7 @@ export default function Home() {
         <ListGroup>
           <ListGroupItemLink href={"/posts"} title="posts" />
           <ListGroupItemLink href={"/users"} title="users" />
-          <ListGroupItemLink href={"/admin"} title="admin" />
-          <ListGroupItemLink href={"/admin/panel"} title="admin - panel" />
-          <ListGroupItemLink href={"/fPosts"} title="filtered posts" />
+          <ListGroupItemLink href={"/usersNoStore"} title="users no store" />
         </ListGroup>
       </Row>
     </Container>
