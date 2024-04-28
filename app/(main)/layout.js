@@ -1,5 +1,5 @@
 import MainContextProvider from "@/context/mainContext";
-import "./globals.css";
+import "../globals.css";
 import Body from "@/components/layout/Body";
 export const metadata = {
   title: "Create Next App",
