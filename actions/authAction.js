@@ -4,7 +4,7 @@ import axios from "axios"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 
-export const loginAction = async (formData) => {
+export const loginAction = async (prevState,formData) => {
     const phone = formData.get("phone")
     const password = formData.get("password")
     const remember = formData.get("remember") || 0
@@ -13,5 +13,7 @@ export const loginAction = async (formData) => {
         const token = res.data.token
         cookies().set("loginToken", token)
         redirect("/userpanel")
+    }else{
+        return {error:"Unauthorized", success: false}
     }
 }
