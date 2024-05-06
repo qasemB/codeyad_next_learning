@@ -5,10 +5,10 @@ import ToggleBtn from '@/components/ToggleButton';
 import React from 'react';
 import { GrUserAdmin } from 'react-icons/gr';
 import { useFormState } from 'react-dom'
+import AuthButton from '@/components/AuthButton';
 
 const Login = () => {
-    const [state, formAction] = useFormState(loginAction, {error: "", success: false})
-    console.log(state);
+    const [state, formAction] = useFormState(loginAction, { error: "", success: false })
     return (
         <div className='flex justify-center items-center h-full w-full px-2  lg:px-10'>
             <form action={formAction} className='w-full text-gray-600 bg-gradient-to-b from-gray-300 to-gray-100 p-3 rounded-lg border-2 shadow'>
@@ -31,8 +31,13 @@ const Login = () => {
                 </div>
 
                 <div className='my-6 px-4'>
-                    <SubmitForm/>
+                    <SubmitForm />
                 </div>
+
+                <div className='flex justify-center mt-5'>
+                    <AuthButton />
+                </div>
+
             </form>
         </div>
     );
