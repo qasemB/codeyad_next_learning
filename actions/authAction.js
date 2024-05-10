@@ -41,3 +41,20 @@ export const loginAction = async (prevState,formData) => {
         return {error:"Unauthorized", success: false}
     }
 }
+
+export const isLoggedIn = async ()=>{
+    const token = cookies().get("loginToken")?.value
+
+    if (!token) return false
+
+    const res = await fetch("https://ecomadminapi.azhadev.ir/api/auth/user", {
+            method: "GET",
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        }) 
+
+    if (res.status !== 200)  return false
+
+    return true
+}
