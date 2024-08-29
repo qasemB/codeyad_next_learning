@@ -14,7 +14,7 @@ const Posts = () => {
         router.push("/")
     }
     return (
-        <div className='flex flex-col justify-center items-center h-full'>
+        <div className='flex flex-col justify-center items-center'>
             <GrUserExpert className="size-20"/>
             <h1 className='my-5'>صفحه کاربر</h1>
             <CustomButton className='bg-gray-500 w-64' onClick={handleLogout}>خروج</CustomButton>
