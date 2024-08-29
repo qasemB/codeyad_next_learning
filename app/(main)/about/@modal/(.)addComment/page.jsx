@@ -1,8 +1,9 @@
-
-import Link from 'next/link';
+'use client'
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const page = () => {
+    const router = useRouter()
     return (
         <div className="animate-fade fixed w-full h-screen top-0 left-0 bg-[#00000066] flex justify-center items-center">
             <form className="w-1/3 bg-white rounded-lg p-5 shadow-2xl border">
@@ -15,9 +16,7 @@ const page = () => {
                     <label>متن پیام</label>
                     <textarea cols={20} placeholder="متن خود را تایپ کنید..." className="rounded-md border p-4"></textarea>
                 </div>
-                <Link href={"/about"}>
-                    <button type="button" className="rounded-full mt-5  bg-cyan-500 text-white px-5 py-3 w-full">ثبت نظر</button>
-                </Link>
+                <button onClick={() => router.back()} type="button" className="rounded-full mt-5  bg-cyan-500 text-white px-5 py-3 w-full">ثبت نظر</button>
             </form>
         </div>
     );
